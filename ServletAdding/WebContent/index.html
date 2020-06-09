@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Addition</title>
+
+<script type="text/javascript">
+function Addvalidation(){
+var First = document.addition.first.value;
+var Second = document.addition.second.value;
+if(First==0 || Second==0){
+alert("Fields Can not be empty");
+return false;
+}
+}
+</script>
+
+
+<style type="text/css">
+div{
+position: absolute;
+top: 100px;
+left: 250px;
+width:300px;
+height:100px;
+border: 3px solid Orange;
+border-radius: 15px;
+</style>
+
+</head>
+<body>
+<div>
+<form action="AddServlet" name="addition">
+<table>
+<tr><td>First Number:</td> <td><input type="number" name="first"/></td></tr>
+<tr><td>Second Number:</td> <td> <input type="number" name="second"></td></tr>
+<tr><td colspan="2" align="center"><input type="submit" value="ADD" onClick="return Addvalidation()"></td></tr>
+</table>
+
+</form>
+</div>
+</body>
+</html>
